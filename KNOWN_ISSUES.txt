@@ -1,0 +1,9 @@
+Enabling receive sharing form other apps:
+
+The app is kept as singleTop vs singleTask. This mean that when shaging an image from another app a new instance of Piwigo is created. This is acceptable, since the user can just go back, to the app where he is sharing the image from, look for another image and upload it. This bahaviour is not easy to get with singleTask.
+
+The back button doesn't appear when you share an image from other app. This makes sense since you have starting a new instance of Piwigo and there is not a prevous page.
+
+This behaviour allows the user to keep and navigate through Piwigo and share apps from other apps without interrupting their workflow.
+
+The album parameter for the UploadPage is now optional. If it is not passed (like in the case of sharing images from another app) a dialog to select the album is shown. Only albums for which the user has permissions are shown.
